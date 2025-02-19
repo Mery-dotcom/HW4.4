@@ -46,7 +46,7 @@ class MessageAdapters(
 
     class DuffUtilCallback : DiffUtil.ItemCallback<MessageResponse>() {
         override fun areItemsTheSame(oldItem: MessageResponse, newItem: MessageResponse): Boolean {
-            return oldItem == newItem
+            return oldItem.id == newItem.id
         }
 
         override fun areContentsTheSame(oldItem: MessageResponse, newItem: MessageResponse): Boolean {

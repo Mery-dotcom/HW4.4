@@ -35,8 +35,8 @@ class ChatViewModel : ViewModel() {
                 val updateList = _messages.value?.toMutableList() ?: mutableListOf()
                 updateList.add(newMessage)
                 _messages.postValue(updateList)
-                refreshChat(chatId)
-                Log.e("ololo", "sendMessage", )
+//                refreshChat(chatId)
+                Log.e("ololo", "messages list: ${_messages.value}", )
             } catch (e: Exception) {
                 e.printStackTrace()
                 Log.e("ololo", "sendMessage: ${e.message}", )
